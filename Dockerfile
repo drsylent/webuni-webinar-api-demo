@@ -4,7 +4,7 @@ RUN mkdir /opt/build
 WORKDIR /opt/build
 COPY .mvn .mvn
 COPY src src
-COPY ./* .
+COPY ./* ./
 RUN ./mvnw clean verify
 
 FROM eclipse-temurin:17-jre
