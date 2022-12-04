@@ -5,7 +5,7 @@ WORKDIR /opt/build
 COPY .mvn .mvn
 COPY src src
 COPY ./* ./
-RUN ./mvnw clean verify
+RUN chmod +x ./mvnw && ./mvnw clean verify
 
 FROM eclipse-temurin:17-jre
 RUN mkdir /opt/app && chown 1001 -R /opt/app
